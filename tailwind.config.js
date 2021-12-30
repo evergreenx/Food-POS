@@ -33,6 +33,7 @@ module.exports = {
           900: withOpacity('--tw-clr-primary-900'),
         },
         dark: '#222222',
+        secondary: '#1F1D2B',
       },
       keyframes: {
         flicker: {
