@@ -63,7 +63,8 @@
   }
 
   body {
-    @apply font-primary text-sm md:text-base;
+    @apply font-primary text-sm md:text-base bg-bgprimary text-white;
+   
   }
   /* #endregion  /**======== Typography =========== */
 
@@ -104,7 +105,7 @@
   }
 }
 
-.active {
+/* .active {
   border-right: 4px solid #f5574f;
   background-color: #EA7C69;
-}
+} */

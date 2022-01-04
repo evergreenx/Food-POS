@@ -3,9 +3,6 @@ import * as React from 'react';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
 
 export default function HomePage() {
   return (
@@ -14,7 +11,7 @@ export default function HomePage() {
       {/* <Seo templateTitle='Home' /> */}
   
 
-      <main className=' pl-32'>
+      <main className=' px-32'>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, cum neque dolor repudiandae alias cupiditate ratione ut. Fugit tenetur ex earum fuga voluptatum neque, voluptate dolore saepe quibusdam hic culpa?
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ad possimus illum, minus laudantium vel porro, repellendus suscipit vero iure, earum dolorum. Soluta eligendi ad odio cumque natus illum? Ea.
       Rerum inventore incidunt aspernatur commodi accusantium doloribus tenetur vitae hic, assumenda, voluptatum quia. Asperiores architecto magnam dolorum quia beatae omnis iste tempore impedit exercitationem repellendus molestias quas eligendi, aliquid nemo!

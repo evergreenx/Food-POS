@@ -34,6 +34,7 @@ module.exports = {
         },
         dark: '#222222',
         secondary: '#1F1D2B',
+        bgprimary : '#2D303E'
       },
       keyframes: {
         flicker: {
