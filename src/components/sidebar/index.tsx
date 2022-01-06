@@ -14,6 +14,7 @@ import Notification from '../../../public/images/Notification.svg';
 import Setting from '../../../public/images/Setting.svg';
 
 export default function index() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   return (
     <div className='bg-secondary fixed flex flex-col h-full items-center justify-between p-5 rounded-r-xl w-24'>
@@ -25,9 +26,9 @@ export default function index() {
 
       <section className='flex flex-col h-full sidebar-links'>
         <Tooltip title='Home' placement='right-end'>
-          <Link href='/' passHref>
-            <a className={router.pathname == '/' ? 'active' : ''}>
-              <div className='pt-3 lg:pt-5 xl:pt-10'>
+          <div className='pt-3 lg:pt-5 xl:pt-10'>
+            <Link href='/' passHref>
+              <a className={router.pathname == '/' ? 'active' : ''}>
                 <Image
                   src={Home}
                   className='cursor-pointer h-24 w-24'
@@ -35,9 +36,9 @@ export default function index() {
                   height={25}
                   width={25}
                 />
-              </div>
-            </a>
-          </Link>
+              </a>
+            </Link>
+          </div>
         </Tooltip>
 
         <Tooltip title='Discount' placement='right-end'>
