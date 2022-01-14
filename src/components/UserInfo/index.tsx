@@ -1,12 +1,11 @@
-import React from 'react'
-import TopNav from './TopNav'
+import React from 'react';
 
-export default function index() {
+import TopNav from './TopNav';
+
+export default function Index() {
   return (
     <div>
       <TopNav />
-
-
     </div>
-  )
+  );
 }
