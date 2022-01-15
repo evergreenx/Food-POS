@@ -4,7 +4,8 @@ import { FaSearch } from 'react-icons/fa';
 export default function TopNav() {
   function addDate() {
     const date = new Date();
-    const day = date.getDay();
+    const day = date.getUTCDate();
+    const dayofWeek = date.getDay();
 
     const year = date.getFullYear();
 
@@ -21,7 +22,7 @@ export default function TopNav() {
     const shortMonth = date.toLocaleString('en-us', {
       month: 'short',
     });
-    const dateString = `${dayString[day]} , ${day} ${shortMonth} ${year}`;
+    const dateString = `${dayString[dayofWeek]} , ${day} ${shortMonth} ${year}`;
 
     return dateString;
   }
@@ -34,7 +35,7 @@ export default function TopNav() {
         <time>{addDate()}</time>
       </div>
 
-      <div className='space-x-6 border-2 border-inputBorder flex items-center px-4 py-3 rounded-lg focus:inputBorder'>
+      <div className='border-2 border-inputBorder flex items-center px-4 py-3 rounded-lg space-x-6 focus:inputBorder'>
         <FaSearch className='text-xl' />
 
         <input
