@@ -105,6 +105,30 @@
   }
 }
 
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+color:#EA7C69 !important;
+
+
+
+}
+
+.css-1aquho2-MuiTabs-indicator{
+background-color:#EA7C69 !important;
+/* width:20px */
+max-width:50px;
+height:3px;
+border-radius: 20px;
+}
+
+.css-1gsv261{
+  border-bottom: 1px solid grey;
+
+}
+
+/* .MuiTabs-indicator{
+  width: 10% !important;
+} */
 /* .active {
   border-right: 4px solid #f5574f;
   background-color: #EA7C69;

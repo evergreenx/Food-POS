@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import { makeStyles } from '@mui/styles';
-
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
 // import TabPanel from '../TabPanel';
 import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
+import React, { useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
+
   root: {
-    height: 70,
-    '& .MuiSlider-thumb': {
-      backgroundColor: '#f0eded',
-      height: 20,
-      width: 20,
-      borderRadius: '20%',
-    },
+    fontWeight: 'bold',
+    fontSize: '3.5rem',
 
-    '& .MuiSlider-track': {
-      height: 7,
-    },
-  },
-
-
+  
+  "& .MuiTabs-indicator": {
+    display: "flex",
+    justifyContent: "flex-start",
+    backgroundColor: "transparent",
+    "& > span": {
+      maxWidth: 10,
+      width: "100%",
+      backgroundColor: "white"
+    }
+  }
+}
 }));
 export default function DishesTab() {
   const [value, setValue] = useState(0);
@@ -67,9 +68,11 @@ export default function DishesTab() {
           <Tabs
             value={value}
             onChange={handleChange}
-            textColor='white'
+            // textColor='white'
             aria-label='basic tabs example'
-            className='text-white'
+            className={classes.root}
+            centered={false}
+            TabIndicatorProps={{ children: <span /> }}
           >
             <Tab label='Item One' {...a11yProps(0)} />
             <Tab label='Item Two' {...a11yProps(1)} />
@@ -77,7 +80,9 @@ export default function DishesTab() {
           </Tabs>
         </Box>
 
-        <TabPanel value={value} index={0} className='text-white'>
+        <div>select dishes here</div>
+
+        <TabPanel value={value} index={0} >
           Item One
         </TabPanel>
         <TabPanel value={value} index={1}>
