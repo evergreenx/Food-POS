@@ -1,8 +1,20 @@
-import React from 'react';
+import axios from 'axios';
 import Image from 'next/image';
-import FoodImg from '../../../public/images/food.jpg';
+import React from 'react';
+import { useQuery } from 'react-query';
 
+import FoodImg from '../../../public/images/food.jpg';
 export default function HotDishes() {
+  const intialQuery = 'hot dishes';
+  //  env variables
+  const apiKey = process.env.API_KEY;
+  const apiID = process.env.API_ID;
+  const url = `https://api.edamam.com/search?q=${intialQuery}&app_id=${apiID}&app_key=${apiKey}`;
+  // react query fetch
+  const { data, error, status } = useQuery('hotDishes', () =>
+    axios.get(url)
+  );
+
   return (
     <div className='flex'>
       <div className='bg-secondary flex flex-col food-card h-64 items-center justify justify-between px-5 py-8 rounded-xl w-56'>
