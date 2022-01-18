@@ -15,6 +15,9 @@ export default function HotDishes() {
     axios.get(url)
   );
 
+
+
+  console.log(data)
   return (
     <div className='flex'>
       <div className='bg-secondary flex flex-col food-card h-64 items-center justify justify-between px-5 py-8 rounded-xl w-56'>
