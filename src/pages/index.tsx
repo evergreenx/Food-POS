@@ -2,7 +2,6 @@ import * as React from 'react';
 import Dishes from '@/components/dishes';
 
 import Layout from '@/components/layout/Layout';
-import Seo from '@/components/Seo';
 import UserInfo from '@/components/userInfo';
 import { QueryClient, QueryClientProvider } from "react-query";
 
