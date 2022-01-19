@@ -49,7 +49,6 @@
 
   body {
     font-family: 'Barlow', sans-serif;
-
   }
 
   /* #region  /**=========== Typography =========== */
@@ -70,8 +69,7 @@
   }
 
   body {
-    @apply font-primary text-sm md:text-base bg-bgprimary text-white;
-   
+    @apply bg-bgprimary font-primary text-sm text-white md:text-base;
   }
   /* #endregion  /**======== Typography =========== */
 
@@ -113,26 +111,20 @@
   }
 }
 
-
-
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
-color:#EA7C69 !important;
-
-
-
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #ea7c69 !important;
 }
 
-.css-1aquho2-MuiTabs-indicator{
-background-color:#EA7C69 !important;
-/* width:20px */
-max-width:50px;
-height:3px;
-border-radius: 20px;
+.css-1aquho2-MuiTabs-indicator {
+  background-color: #ea7c69 !important;
+  /* width:20px */
+  max-width: 50px;
+  height: 3px;
+  border-radius: 20px;
 }
 
-.css-1gsv261{
+.css-1gsv261 {
   border-bottom: 1px solid grey;
-
 }
 
 /* .MuiTabs-indicator{
