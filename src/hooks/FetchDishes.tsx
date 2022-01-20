@@ -8,23 +8,26 @@ export default function useDishes({ dishes }) {
   const APP_ID = '7eacc5e2';
   const API_KEY = '9a645d8682cce8be15d64b6eef45bccd';
 
-
   const url = `https://api.edamam.com/search?q=${dishes}&app_id=${APP_ID}&app_key=${API_KEY}`;
   // react query fetch
   const { data, error, status } = useQuery(dishes, () => axios.get(url));
 
   // console.log(data, dishes);
 
-  if(status === 'loading') {
-    return <div>Loading...</div>
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  // function that creates random price
+  function randomPrice() {
+    return Math.floor(Math.random() * (100 - 1) + 1);
   }
 
   return (
-    <div className='grid grid-cols-3 gap-4 '>
+    <div className='gap-4 grid grid-cols-3'>
       {data?.data?.hits?.map((i) => (
         <>
-
-          <div className='bg-secondary mt-5 flex flex-col food-card h-64 items-center justify justify-between px-5 py-8 rounded-xl w-56'>
+          <div className='bg-secondary flex flex-col food-card h-64 items-center justify justify-between mt-5 px-5 py-8 rounded-xl w-56'>
             <div className='-m-20 image-container'>
               <Image
                 src={i.recipe.image}

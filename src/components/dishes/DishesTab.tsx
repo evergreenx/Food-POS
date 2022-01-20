@@ -140,7 +140,8 @@ export default function DishesTab() {
       </div>
 
       <TabPanel value={value} index={0}>
-        <HotDishes />
+      <FetchDishes dishes={'hot dishes'} />
+
       </TabPanel>
       <TabPanel value={value} index={1}>
         
