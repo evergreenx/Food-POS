@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import axios from 'axios';
+import Image from 'next/image';
 
 export default function useDishes({ dishes }) {
   const [foodData, setFoodData] = useState([]);
@@ -18,7 +19,31 @@ export default function useDishes({ dishes }) {
         <>
           <p key={i.recipe.label}>{i.recipe.label}</p>
 
-          <img src={i.recipe.image} alt={i.recipe.label} width={40} />
+        
+
+          <div className='bg-secondary flex flex-col food-card h-64 items-center justify justify-between px-5 py-8 rounded-xl w-56'>
+        <div className='-m-20 image-container'>
+          <Image
+            src={i.recipe.image}
+            alt='food'
+            className='rounded-full'
+            height={140}
+            width={140}
+          />
+        </div>
+
+        <div className='food-details text-center'>
+          <div className='food-card-title'>
+            <p className='font-bold text-sm'>{i.recipe.label}</p>
+          </div>
+
+          <div className='food-card-price text-sm'>$2.29</div>
+
+          <div className='food-available text-LightText text-sm'>
+            10 Bowls available
+          </div>
+        </div>
+      </div>
         </>
       ))}
     </div>

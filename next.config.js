@@ -7,9 +7,10 @@ module.exports = {
   reactStrictMode: true,
 
   // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
+  images: {
+    domains: [
+      'res.cloudinary.com',
+      'www.edamam.com'
+    ],
+  },
 };
