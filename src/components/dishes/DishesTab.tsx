@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react';
+import FetchDishes from '../../hooks/FetchDishes';
 import HotDishes from '../choose/HotDishes';
 
 const useStyles = makeStyles((theme) => ({
@@ -142,10 +143,27 @@ export default function DishesTab() {
         <HotDishes />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        
+        <FetchDishes dishes={'cold dishes'} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      <FetchDishes dishes={'Soup'} />
+
+      </TabPanel>
+
+      <TabPanel value={value} index={3}>
+      <FetchDishes dishes={'Grill'} />
+
+      </TabPanel>
+
+      <TabPanel value={value} index={4}>
+      <FetchDishes dishes={'Appetizer'} />
+
+      </TabPanel>
+
+      <TabPanel value={value} index={5}>
+      <FetchDishes dishes={'dessert'} />
+
       </TabPanel>
       {/* </Box> */}
     </div>
