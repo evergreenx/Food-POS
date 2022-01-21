@@ -19,15 +19,15 @@ export default function useDishes({ dishes }) {
   }
 
   // function that creates random price
-  function randomPrice() {
-    return Math.floor(Math.random() * (100 - 1) + 1);
+  function randomPrice(range:number) {
+    return Math.floor(Math.random() * (range - 1) + 1);
   }
 
   return (
     <div className='gap-4 grid grid-cols-3'>
       {data?.data?.hits?.map((i) => (
-        <>
-          <div className='bg-secondary flex flex-col food-card h-64 items-center justify justify-between mt-5 px-5 py-8 rounded-xl w-56'>
+
+          <div key={i.recipe.label} className='bg-secondary flex flex-col food-card h-64 items-center justify justify-between mt-10 px-5 py-8 rounded-xl w-56'>
             <div className='-m-20 image-container'>
               <Image
                 src={i.recipe.image}
@@ -43,14 +43,14 @@ export default function useDishes({ dishes }) {
                 <p className='font-bold text-sm'>{i.recipe.label}</p>
               </div>
 
-              <div className='food-card-price text-sm'>$2.29</div>
+              <div className='food-card-price text-sm'>${randomPrice(500)}</div>
 
               <div className='food-available text-LightText text-sm'>
-                1 Bowls available
+                {randomPrice(10)} Bowls available
               </div>
             </div>
           </div>
-        </>
+       
       ))}
     </div>
   );
