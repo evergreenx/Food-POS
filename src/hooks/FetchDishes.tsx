@@ -24,7 +24,7 @@ export default function useDishes({ dishes }) {
   }
 
   return (
-    <div className=' grid grid-cols-3 2xl:grid-cols-4 w-full'>
+    <div className=' grid md:grid-cols-3 2xl:grid-cols-4 sm:grid-cols-2  w-full'>
       {data?.data?.hits?.map((i) => (
 
           <div key={i.recipe.label} className='bg-secondary flex flex-col food-card h-64 items-center justify justify-between mb-20 px-5 py-8 rounded-xl w-56'>
