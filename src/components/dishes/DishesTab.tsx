@@ -84,8 +84,6 @@ export default function DishesTab() {
 
   return (
     <div className='py-10'>
-    
-
       <Box sx={{ width: '100%' }}>
         {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
         <Tabs
@@ -140,31 +138,25 @@ export default function DishesTab() {
       </div>
 
       <TabPanel value={value} index={0}>
-      <FetchDishes dishes={'hot dishes'} />
-
+        <FetchDishes dishes={'hot dishes'} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        
         <FetchDishes dishes={'cold dishes'} />
       </TabPanel>
       <TabPanel value={value} index={2}>
-      <FetchDishes dishes={'Soup'} />
-
+        <FetchDishes dishes={'Soup'} />
       </TabPanel>
 
       <TabPanel value={value} index={3}>
-      <FetchDishes dishes={'Grill'} />
-
+        <FetchDishes dishes={'Grill'} />
       </TabPanel>
 
       <TabPanel value={value} index={4}>
-      <FetchDishes dishes={'Appetizer'} />
-
+        <FetchDishes dishes={'Appetizer'} />
       </TabPanel>
 
       <TabPanel value={value} index={5}>
-      <FetchDishes dishes={'dessert'} />
-
+        <FetchDishes dishes={'dessert'} />
       </TabPanel>
       {/* </Box> */}
     </div>

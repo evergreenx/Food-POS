@@ -29,13 +29,13 @@ export default function TopNav() {
 
   return (
     <header className='flex lg:flex-row items-center justify-between'>
-      <div className='lg:p-4'>
+      <div className='p-4'>
         <h2>Jaegar Resto</h2>
 
         <time>{addDate()}</time>
       </div>
 
-      <div className='border-2 border-inputBorder lg:flex items-center px-4 py-3 rounded-lg space-x-6 focus:inputBorder'>
+      <div className='border-2 border-inputBorder flex items-center px-4 py-3 rounded-lg space-x-6 focus:inputBorder'>
         <FaSearch className='text-xl' />
 
         <input
