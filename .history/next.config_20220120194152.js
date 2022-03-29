@@ -10,8 +10,7 @@ module.exports = {
   images: {
     domains: [
       'res.cloudinary.com',
-      'www.edamam.com',
-      'edamam-product-images.s3.amazonaws.com'
+      'www.edamam.com'
     ],
   },
 };
